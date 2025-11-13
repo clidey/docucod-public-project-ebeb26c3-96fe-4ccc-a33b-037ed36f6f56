@@ -1,0 +1,65 @@
+{
+  "background": {
+    "decoration": "gradient"
+  },
+  "colors": {
+    "dark": "#1E3A8A",
+    "light": "#60A5FA",
+    "primary": "#60A5FA"
+  },
+  "favicon": "/favicon.svg",
+  "fonts": {
+    "family": "Montserrat",
+    "format": "woff2",
+    "source": "https://fonts.gstatic.com/s/googlesansflex/v5/t5sJIQcYNIWbFgDgAAzZ34auoVyXkJCOvp3SFWJbN5hF8Ju1x6sKCyp0l9sI40swNJwGpVd4AZzz0v6lJ4qFXNZhGjLvDSkV4USKMo6qQzwliVdHAy9jxTDHg_ugnAakpwGc-cxgUqDCIUI.woff2"
+  },
+  "icons": {
+    "library": "fontawesome"
+  },
+  "logo": {
+    "dark": "./logo/logo.svg",
+    "light": "./logo/logo.svg"
+  },
+  "name": "Unnamed TypeScript Application",
+  "navigation": {
+    "tabs": [
+      {
+        "groups": [
+          {
+            "group": "Product Introduction \u0026 Architecture",
+            "pages": [
+              "overview/intro-and-architecture/what-is-this-product",
+              "overview/intro-and-architecture/system-architecture"
+            ]
+          },
+          {
+            "group": "Core Concepts \u0026 Key Workflows",
+            "pages": [
+              "overview/core-concepts/core-concepts-terminology",
+              "overview/core-concepts/quick-feature-overview"
+            ]
+          }
+        ],
+        "tab": "Overview"
+      },
+      {
+        "groups": [
+          {
+            "group": "Setup and First Run",
+            "pages": [
+              "getting-started/setup-and-first-run/prerequisites-and-installation",
+              "getting-started/setup-and-first-run/configuration-and-initial-setup",
+              "getting-started/setup-and-first-run/first-run-and-verification",
+              "getting-started/setup-and-first-run/troubleshooting-setup-issues"
+            ]
+          }
+        ],
+        "tab": "Getting Started"
+      }
+    ]
+  },
+  "styling": {
+    "codeblocks": "dark",
+    "eyebrows": "breadcrumbs"
+  }
+}
