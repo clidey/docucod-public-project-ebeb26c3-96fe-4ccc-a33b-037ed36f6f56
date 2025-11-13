@@ -1,0 +1,50 @@
+---
+title: "Core Concepts & Terminology"
+description: "Defines common terms, structural ideas (such as modules, the main app entry point), and basic workflow stages relevant to the product. Emphasizes practical understanding and relevance to real user efforts, tied to top-level code files."
+---
+
+## Understanding Core Concepts & Terminology
+
+Navigating any product begins with a clear grasp of its foundational ideas and language. This page introduces the essential terms and structural components that shape your experience with the product. By connecting these concepts to common workflows and key code files, you can develop a practical understanding that helps you achieve your goals efficiently.
+
+### What Core Concepts Mean for You
+
+At its heart, the product is designed around several core concepts that support both its functionality and extensibility. These include the modular design of the application, the main app entry point where execution begins, and the typical stages of user workflows that guide how features come together. Each concept reflects part of the architecture but, more importantly, maps to the outcomes you want—creating, configuring, and customizing your workspace intuitively.
+
+The primary audience for this page ranges from new users seeking a solid foundation before diving deeper, to advanced users and developers who want a lucid reference to streamline their implementation efforts. Understanding these terms paves the way toward mastering product capabilities and troubleshooting with confidence.
+
+### An Overview of Key Architectural Ideas
+
+The product follows a modular structure, centered around clearly defined files and components that manage configuration, execution, and processing. The main app entry point is where the initial loading occurs, invoking essential setup functions and initializing user settings. Modules are responsible for different areas such as handling plugin lifecycle events, processing markdown content, and managing interaction with third-party dependencies.
+
+Workflow stages progress naturally from setup through active processing to cleanup, enabling users to tailor their environment while maintaining smooth performance. The modularity not only enhances maintainability but also ensures that individual components can evolve without disrupting the overall system.
+
+### Core Terminology in Your Workflow
+
+Terms like "plugin", "postProcessor", "settings", and "context" appear throughout the product documentation and codebase. For instance, the plugin module encapsulates much of the user-facing logic and registers components during startup. The postProcessor function plays a pivotal role in transforming markdown content dynamically, using defined context objects to access the user's current environment and data.
+
+Settings management functions handle persistence, allowing customization choices to be saved and reloaded seamlessly. Knowing these terms helps you comprehend where to configure options, how the app responds to changes, and what happens behind the scenes when you interact with the interface.
+
+A practical example: when you add a new markdown note that includes specialized notation, the postProcessor triggers to render that note appropriately. Meanwhile, the plugin's lifecycle functions ensure your custom settings are considered at every stage, creating a cohesive experience.
+
+<Tip>
+Referencing core terminology consistently bridges the gap between what you do in the interface and how the system interprets your actions behind the scenes.
+</Tip>
+
+### How the Pieces Fit Together
+
+Consider the flow from launching the product to seeing your customized workspace: the main entry script invokes an initialization sequence where settings are loaded. These settings configure the plugin, which registers a postProcessor responsible for handling specific content types as they appear in your notes. As you interact, updates trigger saving functions that persist your changes, preserving your environment for future sessions.
+
+This interaction between modules and workflow stages underlies your day-to-day use—it turns complex internal processes into fluid user experiences. Knowing these concepts deepens your capacity to troubleshoot issues or extend the product with confidence.
+
+<Source url="https://github.com/abcjs-music/obsidian-plugin-abcjs" paths={[{"path": "plugin.ts", "range": "1-120"},{"path": "main.ts", "range": "1-80"}]} branch="main" />
+
+### Building Your Foundation for Mastery
+
+Getting comfortable with these core concepts lays the groundwork for advancing into deeper features and custom workflows. As you progress, you will find it easier to interpret documentation, anticipate feature behavior, and contribute to your own workflows or plugin extensions.
+
+To continue your journey, explore the [What is This Product?](/overview/intro-and-architecture/what-is-this-product) page to connect these concepts to the product’s purpose and broader system design. For setup and hands-on guidance, the [Getting Started](/getting-started/setup-and-first-run/prerequisites-and-installation) section awaits.
+
+<Check>
+Focus first on the key terms introduced here before tackling advanced configuration or troubleshooting to optimize your learning path.
+</Check>
