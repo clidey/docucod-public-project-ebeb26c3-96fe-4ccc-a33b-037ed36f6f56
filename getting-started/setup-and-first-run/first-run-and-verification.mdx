@@ -1,0 +1,86 @@
+---
+title: "First Run & Verification"
+description: "Run the product for the first time and verify that everything is working correctly. Includes quick validation steps and basic commands to confirm successful setup."
+---
+
+## Running Your First Session and Verifying Setup
+
+Launching the product for the first time marks a critical moment: it lets you confirm that installation and configuration steps were successful and that the core features respond as expected. This page guides you through executing your initial run, understanding what to expect during this process, and performing key validation checks to ensure everything operates smoothly.
+
+When you start the product for the first time, it initializes various internal services and loads your configurations. Immediately, you should notice the expected behaviors without errors or crashes. Verifying this state early prevents confusion later and sets a solid foundation for your continued usage.
+
+---
+
+## Initial Launch: What to Expect
+
+Starting the product triggers its main processes and integrates any plugins or dependencies, such as ABCJS rendering components or Obsidian integrations, depending on your environment. During this phase, you might see initial loading screens, console log messages, or user interface elements indicating readiness.
+
+Observe these signs carefully:
+- The absence of error messages or warnings in the console
+- Presence of UI components related to your plugin or product features
+- Confirmation messages or status indicators confirming a successful load
+
+If you interface via commands or UI buttons, these should respond immediately.
+
+---
+
+## Quick Validation Steps
+
+To confirm that your first run was successful, execute the following checks tailored to this product’s context. These steps provide concrete proof of proper operations and illustrate how to interact with core features:
+
+<Steps>
+<Step title="Open the Host Application">
+Launch the main application that integrates this plugin or product (e.g., Obsidian). Ensure the environment is responsive and stable.
+</Step>
+<Step title="Trigger the Plugin Initialization">
+Activate your plugin or product features through the UI or command palette. For example, create or open a document that uses ABCJS notation to see if rendering activates.
+</Step>
+<Step title="Verify Visual Output">
+Confirm that the ABC musical notation renders correctly in your document or interface. This visual check demonstrates that the core rendering functionality is active.
+</Step>
+<Step title="Check Console for Load Confirmation">
+Open your developer console or log display and look for messages indicating successful plugin loading, such as no error stack traces and messages like 'Plugin loaded' or 'Settings loaded.'
+</Step>
+<Step title="Run a Basic Command or Function">
+If applicable, execute a basic command or function like saving settings or triggering a post-processor to test dynamic functionality.
+</Step>
+</Steps>
+
+These steps should conclude with no warnings or errors. The rendered notation should match the expected input format, and commands should behave without failure.
+
+---
+
+## Confirming Outcomes and Diagnosing Issues
+
+Success is defined by correct visual outputs accompanied by error-free logs and responsive commands. To further ensure your setup is sound, use this command in the developer console when running the product:
+
+```javascript
+console.log('ABCJSPlugin loaded:', typeof ABCJSPlugin !== 'undefined');
+```
+
+The expected output is:
+
+```text
+ABCJSPlugin loaded: true
+```
+
+If you receive anything other than 'true,' revisit previous installation and configuration steps as something might be misconfigured or missing.
+
+<Tip>
+If visual rendering does not appear or commands return errors, try reloading the host application or reinstalling dependencies. Checking the console for detailed error output often reveals missing packages or permission issues.
+</Tip>
+
+Additionally, ensure that the `loadSettings` and `onload` functions have executed by watching for their associated log statements, which confirm that essential lifecycle hooks are functioning.
+
+---
+
+## Moving Forward
+
+Once your first run completes successfully and validation steps confirm stable operation, you’re ready to explore deeper functionalities. Consider customizing settings or automating workflows using documented commands. To advance your knowledge and skill, visit the following guides:
+
+- [Configuration and Initial Setup](/getting-started/setup-and-first-run/configuration-and-initial-setup)
+- [Troubleshooting Setup Issues](/getting-started/setup-and-first-run/troubleshooting-setup-issues)
+
+These resources provide detailed instructions to tailor your experience and resolve potential hiccups efficiently.
+
+<Source url="https://github.com/abcjs-music/obsidian-plugin-abcjs" paths={[{"path": "plugin.ts", "range": "10-80"}]} branch="main" />
