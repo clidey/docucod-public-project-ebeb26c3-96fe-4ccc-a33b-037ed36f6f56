@@ -1,0 +1,75 @@
+---
+title: "Configuration and Initial Setup"
+description: "Configure the product to suit your environment and preferences. Get clear directions on initializing settings, updating basic configurations, and preparing for a successful first launch."
+---
+
+## Tailoring the Product to Your Environment
+
+Configuring the product properly ensures it aligns perfectly with your workflow and environment. This page guides you step-by-step through initializing essential settings, adjusting key configurations, and preparing your system for a smooth first launch. The goal is to empower you with clear directions to make the product work exactly as you expect from the outset.
+
+## Setting Up the Configuration
+
+Before using the product, you must specify basic configuration options such as plugin preferences, display settings, and integration parameters. These settings live primarily in the configuration file that the system loads at startup. Editing this file to reflect your environment and user preferences is critical to unlocking the product’s full potential.
+
+Start by opening the `manifest.json` and `plugin.ts` where core configurations are defined and managed. The `plugin.ts` contains functions such as `loadSettings` and `saveSettings` which handle reading and writing your custom configuration. Adjust the settings key-value pairs here to match your desired parameters, including any preferences for how the ABCJS rendering behaves within the host environment.
+
+<Steps>
+<Step title="Open Configuration Files">
+Locate and open `manifest.json` and `plugin.ts` in your project directory. These files define and handle the configuration options.
+</Step>
+<Step title="Review Default Settings">
+In `plugin.ts`, examine how `loadSettings` defines the default settings. This is the fallback when user preferences are not yet set.
+</Step>
+<Step title="Modify Settings as Needed">
+Edit values in your settings file (or through the plugin interface if available) to specify your environment preferences, such as notation style, ABCJS rendering options, or plugin feature toggles.
+</Step>
+<Step title="Save and Verify Changes">
+Use the `saveSettings` function to commit changes and reload the plugin to confirm your configuration has taken effect.
+</Step>
+</Steps>
+
+## Essential Configuration Details
+
+Key configuration points include settings related to:
+
+- Plugin activation toggles
+- ABCJS rendering options such as note spacing and style
+- User interface preferences that affect how the plugin integrates with the host application
+
+A minimal configuration block looks like this inside `plugin.ts`:
+
+```typescript
+const defaultSettings = {
+  enablePlugin: true,
+  notationStyle: 'standard',
+  abcjsOptions: {
+    add_classes: true,
+    responsive: 'resize',
+  },
+};
+```
+
+This example shows enabling the plugin by default and setting ABCJS rendering to add CSS classes and be responsive to container size changes. Adjust these keys as appropriate for your specific needs.
+
+<Source url="https://github.com/abcjs-music/obsidian-plugin-abcjs" branch="main" paths={[{"path": "plugin.ts", "range": "50-100"}]} />
+
+## Preparing for Your First Launch
+
+Once your settings are in place, you are ready to launch the product and see it in action. The initial loading process uses the configured options to set up the plugin environment and render the first outputs.
+
+To start the plugin, simply reload or activate it inside the host application following your environment’s standard plugin activation procedures. Upon activation, the `onload` function reads your customized settings and applies them to initialize ABCJS rendering.
+
+Verify that your configuration is correctly applied by inspecting the visual output or checking the plugin status area for active settings display. Successful configuration will reflect here immediately with your chosen preferences in effect.
+
+<Tip>
+If changes do not appear after configuration, ensure to restart the host application or reload the plugin to refresh settings.
+</Tip>
+
+## Next Steps to Explore
+
+With your environment configured and plugin ready, proceed to the [First Run & Verification](/getting-started/setup-and-first-run/first-run-and-verification) guide to launch your first operation and validate your setup.
+
+For deeper insight into troubleshooting common setup issues, the [Troubleshooting Setup Issues](/getting-started/setup-and-first-run/troubleshooting-setup-issues) page will help you quickly identify and resolve configuration problems.
+
+Expand your understanding of core concepts and capabilities by visiting the [Quick Feature Overview & Use Cases](/overview/core-concepts/quick-feature-overview) page, mapping how configuration choices translate into real-world functionality.
+
